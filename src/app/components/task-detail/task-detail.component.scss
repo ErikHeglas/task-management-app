@@ -1,0 +1,17 @@
+.task-detail {
+    &--holder {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 16px; // Added margin for better spacing
+    }
+  
+    &__item {
+      justify-content: center;
+      width: 90%;
+      max-width: 420px;
+    }
+  
+    &__item-header {
+      justify-content: center;
+    }
+  }

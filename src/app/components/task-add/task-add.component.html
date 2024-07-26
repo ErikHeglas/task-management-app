@@ -1,0 +1,29 @@
+<div class="add-task add-task--holder">
+  <h1 class="add-task__title">Task Add</h1>
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="add-task__form">
+    <mat-form-field class="add-task__form-field" color="accent">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="taskTitle" type="text" />
+      @if (taskForm.controls["taskTitle"].invalid) {
+      <mat-error>Please fill out Title</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field class="add-task__form-field" color="accent">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="taskDescription"></textarea>
+      @if (taskForm.controls["taskDescription"].invalid) {
+      <mat-error>Please fill out Description</mat-error>
+      }
+    </mat-form-field>
+    <button
+      mat-fab
+      extended
+      color="accent"
+      [disabled]="taskForm.invalid"
+      type="submit"
+    >
+      <mat-icon>add</mat-icon>
+      Add new Task
+    </button>
+  </form>
+</div>

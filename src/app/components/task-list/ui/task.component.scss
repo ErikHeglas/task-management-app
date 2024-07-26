@@ -1,0 +1,22 @@
+
+.task {
+  
+    &__button-row {
+      display: flex;
+      justify-content: space-between;
+  
+      .mat-mdc-button-base {
+        margin: 16px 8px 8px 0;
+      }
+    }
+  
+    &__description {
+      height: 60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+    }
+  }

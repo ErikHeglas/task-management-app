@@ -1,0 +1,18 @@
+<div class="task-list task-list--holder">
+  @if((tasks$ | async)?.length){
+  <div class="task-list__grid">
+    @for (task of (tasks$ | async) ; track $index) {
+    <task
+      [task]="task"
+      (showDetails)="showTaskDetails($event)"
+      (delete)="deleteTask($event)"
+    ></task>
+    }
+  </div>
+  }@else {
+  <div class="task-list__no-tasks">
+    <h1>You have no tasks</h1>
+  </div>
+
+  }
+</div>

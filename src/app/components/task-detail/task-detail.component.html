@@ -1,0 +1,22 @@
+<div class="task-detail task-detail--holder">
+  <h1>Task Detail</h1>
+</div>
+
+<div class="task-detail task-detail--holder">
+  @if (task$ | async; as task) {
+
+  <mat-card class="task-detail__item">
+    <mat-card-header class="task-detail__item-header">
+      <mat-card-title>
+        {{ task.title }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{ task.description }}
+    </mat-card-content>
+  </mat-card>
+
+  } @else {
+  <h1>Task not found</h1>
+  }
+</div>
